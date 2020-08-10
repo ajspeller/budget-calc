@@ -1,7 +1,8 @@
 <div class="root">
 
 
-  <div [ngClass]="{ 'income' : item.amount > 0, 'expense' : item.amount < 0 }"
+  <div (click)="onTriggerModal()"
+       [ngClass]="{ 'income' : item.amount > 0, 'expense' : item.amount < 0 }"
        class="budget-item">
 
 

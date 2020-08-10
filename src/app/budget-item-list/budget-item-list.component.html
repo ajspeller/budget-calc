@@ -9,6 +9,7 @@
         <ng-container *ngFor="let item of items">
           <ng-container *ngIf="item.amount > 0">
             <app-budget-item-card (deleteItem)="onDelete($event)"
+                                  (editItem)="onEdit(item)"
                                   [item]="item"></app-budget-item-card>
           </ng-container>
         </ng-container>
@@ -24,6 +25,7 @@
         <ng-container *ngFor="let item of items">
           <ng-container *ngIf="item.amount < 0">
             <app-budget-item-card (deleteItem)="onDelete($event)"
+                                  (editItem)="onEdit(item)"
                                   [item]="item"></app-budget-item-card>
           </ng-container>
         </ng-container>

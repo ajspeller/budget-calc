@@ -28,9 +28,10 @@
       </div>
 
       <div class="field is-narrow">
-        <button class="button is-primary"
+        <button class="button"
                 type="submit"
-                [disabled]="f.invalid">Add</button>
+                [ngClass]="{ 'is-primary' : isNewItem, 'is-success' : !isNewItem }"
+                [disabled]="f.invalid">{{ isNewItem ? 'Add' : 'Edit' }}</button>
       </div>
 
     </div>

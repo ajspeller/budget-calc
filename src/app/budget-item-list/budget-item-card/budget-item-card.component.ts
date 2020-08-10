@@ -1,5 +1,6 @@
-import { BudgetItem } from './../../shared/models/BudgetItem.model';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+import { BudgetItem } from './../../shared/models/BudgetItem.model';
 
 @Component({
   selector: 'app-budget-item-card',
@@ -9,6 +10,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class BudgetItemCardComponent implements OnInit {
   @Input() item: BudgetItem;
   @Output() deleteItem = new EventEmitter<BudgetItem>();
+  @Output() editItem = new EventEmitter<void>();
 
   constructor() {}
 
@@ -16,5 +18,9 @@ export class BudgetItemCardComponent implements OnInit {
 
   onDelete(item: BudgetItem): void {
     this.deleteItem.emit(item);
+  }
+
+  onTriggerModal(): void {
+    this.editItem.emit();
   }
 }

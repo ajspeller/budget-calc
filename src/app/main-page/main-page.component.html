@@ -15,4 +15,5 @@
 <hr>
 
 <app-budget-item-list [items]="budgetItems"
+                      (editItem)="onEditItem($event)"
                       (deleteItem)="onDeleteItem($event)"></app-budget-item-list>
