@@ -3,3 +3,7 @@
 :host {
   padding: 20px;
 }
+
+input.ng-touched.ng-invalid {
+  border-color: $red;
+}

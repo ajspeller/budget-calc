@@ -9,7 +9,7 @@
                  id="amount"
                  class="input"
                  style="width: 100px"
-                 ngModel
+                 [ngModel]="item.amount"
                  required
                  placeholder="Amount">
         </p>
@@ -21,7 +21,7 @@
                  name="description"
                  id="description"
                  class="input"
-                 ngModel
+                 [ngModel]="item.description"
                  required
                  placeholder="Description">
         </p>
@@ -29,6 +29,7 @@
 
       <div class="field is-narrow">
         <button class="button is-primary"
+                type="submit"
                 [disabled]="f.invalid">Add</button>
       </div>
 

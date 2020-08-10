@@ -1,19 +1,22 @@
 <div class="root">
 
 
-  <div class="budget-item">
+  <div [ngClass]="{ 'income' : item.amount > 0, 'expense' : item.amount < 0 }"
+       class="budget-item">
 
 
     <div class="description">
-      <p>test</p>
+      <p>{{ item.description }}</p>
     </div>
 
     <div class="amount">
-      100
+      {{ item.amount | currency }}
     </div>
 
 
   </div>
 
+  <div (click)="onDelete(item)"
+       class="x-icon-button"></div>
 
 </div>

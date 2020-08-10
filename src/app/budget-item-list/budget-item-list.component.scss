@@ -26,6 +26,12 @@ section.budget-items-section {
         text-transform: uppercase;
         font-weight: 500;
       }
+
+      .budget-items {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
     }
 
     .income-column {
